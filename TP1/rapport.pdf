@@ -1,0 +1,23 @@
+1. Encapsulation
+L’encapsulation consiste à protéger les données d’une classe en les rendant privées.
+Dans la classe Animal, l’attribut nom est privé et accessible uniquement via la méthode getNom().
+2. Héritage
+L’héritage permet à une classe dérivée d’utiliser les caractéristiques d’une classe mère.
+Dans ce code :
+  Mammifere hérite de Animal
+  Oiseau hérite de Animal
+3. Abstraction
+L’abstraction consiste à définir un comportement sans fournir son implémentation.
+Elle est utilisée avec :
+  la classe abstraite Animal
+  la méthode abstraite faireDuBruit()
+4. Polymorphisme
+Le polymorphisme permet d’utiliser une même méthode avec des comportements différents.
+Dans la méthode main() :
+  Animal tigre = new Mammifere("Tigre");
+  Animal perroquet = new Oiseau("Perroquet");
+La méthode faireDuBruit() s’exécute différemment selon le type réel de l’objet.
+7. Mots‑clés Java
+  Héritage : extends
+  Abstraction : abstract
+  Redéfinition de méthode : @Override
