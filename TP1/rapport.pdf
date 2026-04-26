@@ -1,23 +1,48 @@
-1. Encapsulation
-L’encapsulation consiste à protéger les données d’une classe en les rendant privées.
-Dans la classe Animal, l’attribut nom est privé et accessible uniquement via la méthode getNom().
-2. Héritage
-L’héritage permet à une classe dérivée d’utiliser les caractéristiques d’une classe mère.
-Dans ce code :
-  Mammifere hérite de Animal
-  Oiseau hérite de Animal
-3. Abstraction
-L’abstraction consiste à définir un comportement sans fournir son implémentation.
-Elle est utilisée avec :
-  la classe abstraite Animal
-  la méthode abstraite faireDuBruit()
-4. Polymorphisme
-Le polymorphisme permet d’utiliser une même méthode avec des comportements différents.
-Dans la méthode main() :
-  Animal tigre = new Mammifere("Tigre");
-  Animal perroquet = new Oiseau("Perroquet");
-La méthode faireDuBruit() s’exécute différemment selon le type réel de l’objet.
-7. Mots‑clés Java
-  Héritage : extends
-  Abstraction : abstract
-  Redéfinition de méthode : @Override
+Exercice 1.1 – Programmation Orienté Objet (Code java) 
+  Partie 1 : Théorie et concepts
+    1. Encapsulation
+    L’encapsulation consiste à protéger les données d’une classe en les rendant privées.
+    Dans la classe Animal, l’attribut nom est privé et accessible uniquement via la méthode getNom().
+    2. Héritage
+    L’héritage permet à une classe dérivée d’utiliser les caractéristiques d’une classe mère.
+    Dans ce code :
+      Mammifere hérite de Animal
+      Oiseau hérite de Animal
+    3. Abstraction
+    L’abstraction consiste à définir un comportement sans fournir son implémentation.
+    Elle est utilisée avec :
+      la classe abstraite Animal
+      la méthode abstraite faireDuBruit()
+    4. Polymorphisme
+    Le polymorphisme permet d’utiliser une même méthode avec des comportements différents.
+    Dans la méthode main() :
+      Animal tigre = new Mammifere("Tigre");
+      Animal perroquet = new Oiseau("Perroquet");
+    La méthode faireDuBruit() s’exécute différemment selon le type réel de l’objet.
+  Partie 3 : Identification des mots-clés 
+    7. Mots‑clés Java
+      Héritage : extends
+      Abstraction : abstract
+      Redéfinition de méthode : @Override
+Exercice 1.2 - Programmation Orienté Objet (Code java) 
+  Partie 1 : Théorie et concepts
+    1. Encapsulation :
+    L'encapsulation consiste à protéger les attributs d'une classe en les rendant privés.
+    Dans la classe Vehicule, les attributs marque, modele et annee sont privés
+    et accessibles uniquement via des getters publics.
+    2. Héritage :
+    L'héritage permet à une classe enfant d'hériter des attributs et méthodes d'une classe parent.
+    Les classes Voiture, Camion et Moto héritent de la classe abstraite Vehicule grâce au mot-clé extends.
+    3. Polymorphisme :
+    Le polymorphisme permet de manipuler des objets de différentes classes via une
+    même référence de type parent. Dans la classe GestionTransport, les objets Voiture,
+    Camion et Moto sont référencés par le type Vehicule.
+    4. Abstraction :
+    L'abstraction est utilisée avec la classe abstraite Vehicule qui contient
+    la méthode abstraite afficherDetails(). Elle oblige les classes filles à fournir
+    leur propre implémentation.
+  Partie 3 : Identification des mots-clés 
+    1. La redéfinition de méthode:@Override
+    2. L’héritage:extends(public class Voiture extends Vehicule)
+    3. L’appel au constructeur parent: super();( super(marque, modele, annee))
+   
