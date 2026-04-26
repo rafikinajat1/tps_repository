@@ -1,0 +1,26 @@
+TP2 – Docker : Application Multi-Conteneurs
+  Objectif :
+    Mettre en œuvre Docker et Docker Compose pour déployer une application web
+    multi-conteneurs composée d’un frontend Nginx, d’une base de données
+    PostgreSQL et de pgAdmin pour l’administration.
+  1. Services déployés :- Frontend : serveur Nginx affichant une page HTML- Base de données : PostgreSQL avec volume persistant- Administration : pgAdmin
+  2. Orchestration :
+    Les conteneurs sont orchestrés à l’aide de Docker Compose et communiquent
+    via un réseau Docker dédié (app-network).
+  3. Volume persistant :
+    Un volume nommé db-data est utilisé pour garantir la persistance des données
+    PostgreSQL après l’arrêt et le redémarrage des conteneurs.
+  4. Validation de l’exécution :
+    la construction des images Docker et le lancement
+    réussi des conteneurs frontend, PostgreSQL et pgAdmin.
+(#9 unpacking to docker.io/library/code-frontend:latest 0.1s done
+#9 DONE 0.8s
+
+#10 resolving provenance for metadata file
+#10 DONE 0.0s
+[+] up 5/5
+ ✔ Image code-frontend       Built                                                                 5.5s
+ ✔ Network code_app-network  Created                                                               0.2s
+ ✔ Container code-db-1       Created                                                               0.3s
+ ✔ Container code-frontend-1 Created                                                               0.3s
+ ✔ Container code-pgadmin-1  Created    )
