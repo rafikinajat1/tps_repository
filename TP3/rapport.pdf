@@ -1,4 +1,4 @@
-TP : Maîtrise de Git et Workflow Collaboratif
+TP Pratique Git + Node.js 
 Objectif : Ce TP avait pour but d'approfondir la gestion des versions avec Git, notamment la résolution de conflits, la manipulation de l'historique (Rebase, Cherry-pick) et la synchronisation avec un dépôt distant GitHub.
 
 1. Gestion et Résolution des Conflits
