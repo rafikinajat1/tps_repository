@@ -1,26 +1,30 @@
-TP2 – Docker : Application Multi-Conteneurs
-  Objectif :
-    Mettre en œuvre Docker et Docker Compose pour déployer une application web
-    multi-conteneurs composée d’un frontend Nginx, d’une base de données
-    PostgreSQL et de pgAdmin pour l’administration.
-  1. Services déployés :- Frontend : serveur Nginx affichant une page HTML- Base de données : PostgreSQL avec volume persistant- Administration : pgAdmin
-  2. Orchestration :
-    Les conteneurs sont orchestrés à l’aide de Docker Compose et communiquent
-    via un réseau Docker dédié (app-network).
-  3. Volume persistant :
-    Un volume nommé db-data est utilisé pour garantir la persistance des données
-    PostgreSQL après l’arrêt et le redémarrage des conteneurs.
-  4. Validation de l’exécution :
-    la construction des images Docker et le lancement
-    réussi des conteneurs frontend, PostgreSQL et pgAdmin.
-(#9 unpacking to docker.io/library/code-frontend:latest 0.1s done
-#9 DONE 0.8s
+TP : Maîtrise de Git et Workflow Collaboratif
+Objectif : Ce TP avait pour but d'approfondir la gestion des versions avec Git, notamment la résolution de conflits, la manipulation de l'historique (Rebase, Cherry-pick) et la synchronisation avec un dépôt distant GitHub.
 
-#10 resolving provenance for metadata file
-#10 DONE 0.0s
-[+] up 5/5
- ✔ Image code-frontend       Built                                                                 5.5s
- ✔ Network code_app-network  Created                                                               0.2s
- ✔ Container code-db-1       Created                                                               0.3s
- ✔ Container code-frontend-1 Created                                                               0.3s
- ✔ Container code-pgadmin-1  Created    )
+1. Gestion et Résolution des Conflits
+    Un conflit a été provoqué lors de la fusion de deux branches ayant modifié les mêmes lignes du fichier index.js.
+    
+    Identification : Git interrompt le merge et marque le fichier. Les balises <<<<<<< HEAD (version actuelle) et >>>>>>> [branche] (version entrante) délimitent la zone de conflit.
+    
+    Résolution : L'édition manuelle via un éditeur de texte (ex: notepad index.js) a permis de nettoyer ces balises et de fusionner logiquement les fonctions addition et soustraction.
+    
+    Validation : La résolution est finalisée par un git add suivi d'un git commit de fusion.
+
+2. Réécriture de l'historique : Le Rebase
+    L'utilisation de la commande git rebase a permis d'intégrer les modifications d'une branche bugfix de manière linéaire.
+    
+    Fonctionnement : Contrairement au merge, le rebase déplace la base de la branche actuelle sur le dernier commit de la branche cible.
+    
+    Résultat : Cela permet d'éviter les "commits de fusion" superflus et de maintenir un historique de projet propre et séquentiel.
+
+3. Extraction sélective : Le Cherry-pick
+    Nous avons utilisé git cherry-pick [hash] pour récupérer un commit spécifique (une correction robuste de la fonction addition) depuis une branche de correction vers une branche de fonctionnalité. Cette méthode est privilégiée lorsqu'on ne souhaite pas fusionner l'intégralité d'une branche.
+
+4. Collaboration et Dépôt Distant (GitHub)
+    La dernière étape a consisté à lier le dépôt local à un dépôt distant sur GitHub.
+    
+    Configuration : Association de l'URL distante via git remote add origin.
+    
+    Publication : Utilisation de git push -u origin main pour envoyer la branche principale.
+    
+    Gestion des branches : Chaque branche locale (feature, bugfix) doit faire l'objet d'un push spécifique ou d'une commande git push --all pour être visible sur l'interface GitHub.
