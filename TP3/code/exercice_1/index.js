@@ -1,1 +1,1 @@
-console.log('Hello Node');
+function addition(a, b) { return a + b; } if (require.main === module) { console.log('Resultat:', addition(5, 3)); } module.exports = { addition }; 
